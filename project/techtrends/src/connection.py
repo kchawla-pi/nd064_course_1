@@ -3,8 +3,6 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 
-NUM_CONNECTION = 0
-
 
 @dataclass
 class DBConnectionManager:

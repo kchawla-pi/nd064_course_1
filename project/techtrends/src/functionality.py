@@ -1,6 +1,6 @@
 import logging
 
-from project.techtrends.src.connection import DBConnectionManager
+from src.connection import DBConnectionManager
 
 
 LOGGER = logging.getLogger(__name__)

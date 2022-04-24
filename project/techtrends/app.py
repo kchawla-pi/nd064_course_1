@@ -3,11 +3,11 @@ from pathlib import Path
 
 from flask import Flask, make_response, render_template, request, url_for, redirect, flash
 
-from project.techtrends.src.functionality import (
+from src.functionality import (
     count_posts,
     get_post, write_post,
     )
-from project.techtrends.src.connection import DBConnectionManager
+from src.connection import DBConnectionManager
 
 logging.basicConfig(level=logging.DEBUG)
 LOGGER = logging.getLogger(__name__)
@@ -88,5 +88,13 @@ def metrics():
         )
 
 
-if __name__ == "__main__":
+def run(app: Flask):
     app.run(host='0.0.0.0', port=3111)
+
+
+def main():
+    run(app)
+
+
+if __name__ == "__main__":
+    main()
