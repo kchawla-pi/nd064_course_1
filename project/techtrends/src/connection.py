@@ -7,9 +7,13 @@ NUM_CONNECTION = 0
 
 
 @dataclass
-class ConnectionManager:
+class DBConnectionManager:
     db_path: Path
     _count: int = 0
+
+    @property
+    def count(self):
+        return self._count
 
     def _increment(self):
         self._count += 1
