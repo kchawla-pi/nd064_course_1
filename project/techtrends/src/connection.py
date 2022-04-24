@@ -24,14 +24,3 @@ class DBConnectionManager:
             self._increment()
             connection.row_factory = sqlite3.Row
             yield connection
-
-
-@contextmanager
-def yield_db_connection(db_path='database.db'):
-    """
-    Function to get a database connection.
-    This function connects to database with the name `database.db`
-    """
-    with sqlite3.connect(db_path) as connection:
-        connection.row_factory = sqlite3.Row
-        yield connection
