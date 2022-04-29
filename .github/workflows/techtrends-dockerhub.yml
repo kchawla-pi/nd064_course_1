@@ -27,6 +27,7 @@ jobs:
         - name: Build and push
           uses: docker/build-push-action@v2.10.0
           with:
+            run: DOCKER_IMAGE=kchawlapi/techtrends
             context: ./project
             file: ./project/Dockerfile
             push: true
