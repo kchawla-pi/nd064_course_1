@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  DOCKER_IMAGE: kchawlapi/techtrends
+  DOCKER_IMAGE: "kchawlapi/techtrends"
 
 jobs:
   package_to_docker_hub:
